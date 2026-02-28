@@ -8,7 +8,14 @@ Configuration is loaded from environment variables via python-dotenv
 import os
 from enum import Enum
 from typing import Optional
-from pydantic import BaseSettings, Field
+
+# pydantic v2 moved BaseSettings to the separate `pydantic-settings` package.
+# Try to import from there first for v2.5+, otherwise fall back to pydantic.
+try:
+    from pydantic_settings import BaseSettings
+    from pydantic import Field
+except Exception:
+    from pydantic import BaseSettings, Field
 
 
 class LLMProvider(str, Enum):
