@@ -12,7 +12,7 @@ Markdown
 ## 1. 🧹 The "Clean Slate" Phase
 ```bash
 cd C:\Home\Workspaces\github\reviewbuddy\review-runner
-python -m pip uninstall -r requirements.txt -y
+
 2. 🏗️ The Sandbox Phase (Virtual Environment)
 Bash
 python -m venv venv
@@ -46,38 +46,7 @@ Stop	deactivate
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Old-
+### Old
 Overview
 - Small, configurable Python tool that analyzes GitHub PR diffs using an LLM and returns structured JSON observations suitable for posting to GitHub.
 
