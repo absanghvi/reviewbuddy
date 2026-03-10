@@ -2,6 +2,82 @@
 
 This file consolidates the essential project information and quick-start instructions.
 
+Step-by-step testing process-
+
+Markdown
+# 🛠️ Project Setup & Maintenance Guide: Review-Runner
+
+---
+
+## 1. 🧹 The "Clean Slate" Phase
+```bash
+cd C:\Home\Workspaces\github\reviewbuddy\review-runner
+python -m pip uninstall -r requirements.txt -y
+2. 🏗️ The Sandbox Phase (Virtual Environment)
+Bash
+python -m venv venv
+venv\Scripts\activate
+3. 📦 The Installation Phase
+Bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install pydantic-settings
+4. 🔑 The Configuration Phase (.env)
+Bash
+# notepad .env
+PROVIDER=openai
+OPENAI_API_KEY=ghp_YOUR_TOKEN_HERE
+OPENAI_BASE_URL=[https://models.inference.ai.azure.com](https://models.inference.ai.azure.com)
+OPENAI_MODEL=gpt-4o
+GITHUB_TOKEN=ghp_YOUR_TOKEN_HERE
+5. ✅ The Testing Phase (Pytest)
+Bash
+pytest tests/ -v
+6. 🚀 Execution Phase
+Bash
+python main.py
+7. 🔄 Daily Workflow Summary
+Task	Command
+Start	venv\Scripts\activate
+Test	pytest tests/ -v
+Run	python main.py
+Stop	deactivate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Old-
 Overview
 - Small, configurable Python tool that analyzes GitHub PR diffs using an LLM and returns structured JSON observations suitable for posting to GitHub.
 
